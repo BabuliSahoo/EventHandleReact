@@ -1,0 +1,80 @@
+To Start a react app from scratch to local Deploy 
+GitHub deploy
+Manual Deploy
+
+Html
+Head
+    <link rel="stylesheet" href="styles.css"/>
+
+Body
+ <div id="root"></div>
+    <script src="../src/index.js" type="text/jsx"></script>
+
+
+CSS
+Based on need
+  body {
+    background: #f1ae91;
+    padding: 0 16px;
+  }
+
+
+JS 
+
+
+npm init -y    
+
+npm i react       
+
+npm i react-dom 
+npm i react-scripts
+
+npm start
+
+
+Add type as module 
+  "type": "module",
+
+
+
+Add Script dependency
+"scripts": {
+    "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+
+
+npm start - > Check locally
+
+
+Git Set up:
+
+git init
+
+Add .gitignore file and unwanted files 
+
+Git status
+
+git add .
+
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/BabuliSahoo/ReactProps.git
+git push -u origin main
+
+
+
+Package.json
+  "homepage": "http:/babulisahoo.github.io/ReactProps",
+
+npm install gh-pages --save-dev
+
+To deploy to GitHub:
+npm run deploy
+
+
+
